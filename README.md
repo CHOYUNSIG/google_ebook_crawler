@@ -1,8 +1,8 @@
 # google_ebook_crawler
-Download eBook on Google Play to .pdf
+Download eBook on Google Play to PDF format
 
 crawler.py
-: download ebook to .jpg format each page.
+: download ebook to JPG format each page.
 
 publisher.py
-: make .pdf file using .jpg files.
+: make .pdf file using JPG files.
