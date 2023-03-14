@@ -5,4 +5,4 @@ crawler.py
 : download ebook to JPG format each page.
 
 publisher.py
-: make .pdf file using JPG files.
+: make PDF file using JPG files.
