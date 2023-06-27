@@ -1,4 +1,3 @@
-import sys
 import os
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -13,7 +12,6 @@ import base64
 import re
 import pygame
 import subprocess
-from threading import Thread
 
 
 root = os.getcwd()
@@ -76,12 +74,6 @@ def main_stream():
   else:
     click(r'/html/body/c-wiz[1]/header/nav/div/c-wiz/div/div/div[2]/div/ul/li[1]')
 
-  # load accounts
-  account = driver.find_elements(By.XPATH, r'//div[@id="initialView"]//form//ul/li')
-  another_account = account.pop()
-
-  # page change --------------- googleLogin
-
   # retry until login done successfully
   print("Login.")
   while(True):
@@ -92,9 +84,11 @@ def main_stream():
   print("Open the book.")
   click(r'/html/body/c-wiz[2]/div/div/c-wiz/div/div/div/div/div[4]')
 
-  # page change --------------- selectBook
-
   # retry until book is opened successfully
+  while(True):
+    if len(driver.window_handles) > 1:
+      break
+  driver.switch_to.window(driver.window_handles[1])
   while(True):
     if driver.current_url[0:36] == "https://play.google.com/books/reader":
       break
@@ -144,14 +138,10 @@ def main_stream():
   total_page = int(re.sub(r"[^0-9]", r"", driver.find_element(By.XPATH, r'//mat-dialog-container/info-dialog/mat-dialog-content/div/div/h3[2]').text))
   click(r'//mat-dialog-container/info-dialog/div/button')
 
-  # popup --------------- checkSpec
-
   # final checking
   print("Total pages : " + str(total_page))
   print("Width resolution : " + str(resolution) + "px")
-  input("Enter to process. (Monitoring is possible in " + root + "\\img folder.)")
-
-  # popup --------------- processBar
+  input("Enter to process. (Monitoring is available in " + root + "\\img folder.)")
 
   # start downloading
   print("Processing..")
