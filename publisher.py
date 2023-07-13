@@ -12,7 +12,7 @@ while(True) :
     try : 
         with Image.open(root + '/img/' + str(count) + '.jpg').convert('RGB') as img:
             img_list.append(img)
-        count = count + 1
+        count += 1
         print(str(count) + " pages loadad.")
     except :
         break
