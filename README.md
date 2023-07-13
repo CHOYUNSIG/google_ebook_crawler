@@ -5,9 +5,7 @@ Download eBook on Google Play to PDF format
 
 > ### Requirements:
 > 
-> This project runs on **Python3**.
->
-> You should install **Chrome browser** and **Selenium** library first.
+> This project runs on **Python3**. You should install **Chrome browser** and **Selenium** library first.
 > 
 >     pip install selenium
 
