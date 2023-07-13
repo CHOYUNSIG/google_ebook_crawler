@@ -10,19 +10,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 from time import sleep
 import base64
 import re
-import pygame
 import subprocess
 
 
 root = os.getcwd()
-
-
-pygame.init()
-
-# pygame handler
-screen = pygame.display.set_mode((640, 400))
-clock = pygame.time.Clock()
-
 
 def get_file_content_chrome(driver, uri):
   result = driver.execute_async_script("""
