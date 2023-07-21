@@ -11,5 +11,5 @@ Download eBook on Google Play to PDF format
 
 1. Run **crawler.py** and follow the instructions.
 2. Run **publisher.py**
-3. Check **/pdf** folder.
+3. Check **pdf** folder.
 
