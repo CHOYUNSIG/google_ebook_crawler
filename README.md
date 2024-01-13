@@ -9,7 +9,7 @@ Download eBook on Google Play to PDF format
 > 
 >     pip install selenium
 
-1. Run **crawler.py** and follow the instructions.
-2. Run **publisher.py**
-3. Check **pdf** folder.
+1. Run `crawler.py` and follow the instructions.
+2. Run `publisher.py`
+3. Check `pdf` folder.
 
