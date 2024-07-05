@@ -1,1 +1,0 @@
-store cache data from Chrome browser

@@ -5,11 +5,10 @@ Download eBook on Google Play to PDF format
 
 > ### Requirements:
 > 
-> This project runs on **Python3**. You should install **Chrome browser** and **Selenium** library first.
+> This project runs on **Python3**. You should install **Chrome browser** and below library first.
 > 
->     pip install selenium
+>     pip install selenium webdriver_manager
 
 1. Run `crawler.py` and follow the instructions.
-2. Run `publisher.py`
-3. Check `pdf` folder.
+2. Check `pdf` folder.
 
